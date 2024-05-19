@@ -1,0 +1,44 @@
+> create a folder Pract6 on VS Code
+> create a new folder in Pract6 named as public
+> create a file in public folder as index.html --->  html:5
+                                                     change title as Node JS
+                                                     <body>
+                                                          <h1> This is Static Web Page </h1>
+                                                     </body>
+                          
+
+Normal CommandPrompt:-
+-----------------------
+> cd Pract6
+> npm init
+> Press ENTER
+> Press ENTER
+> This is WAD Pract6 Press ENTER
+> Press ENTER
+> Press ENTER
+> Press ENTER
+> Press ENTER
+> author: Your_Name
+> Press ENTER
+> Press ENTER
+> npm install express --save
+
+
+VS Code:-
+-------------
+> click on folder
+> new file (index.js)  --> const express=require('express');
+                           const app=express();
+                           app.use(express.static('public'))
+                           app.listen(4000,()=>{
+                             console.log("Server is Started");
+                             })
+
+Normal CommandPrompt:-
+-----------------------
+> node index.js
+
+
+Open Chrome:-
+---------------
+in URL type ---> localhost:3000

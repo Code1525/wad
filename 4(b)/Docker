@@ -1,0 +1,34 @@
+Download Desktop Docker & Node JS
+----------------------------------
+
+> open Docker QuickStart Terminal (allow all the messages)
+> Inside the Docker QuickStart Terminal --> docker --version
+
+
+Open VS Code:-
+----------------
+> add extension of Docker(Microsoft)
+> create a folder(folder_name)
+> create a file(Docker) in folder 
+
+> create a JS file as file_name.js --> console.log("Name: Your_nmae");
+                                       console.log("Class: TE");
+                                       console.log("Subject: LP - II Web Application Development");
+                                       console.log("Assignment-4b");
+                           (SAVE)
+                           
+
+> open Docker file --> FROM node:alpine
+                       COPY . /folder_name
+                       CMD node /folder_name/file_name.js
+              (SAVE)                         
+
+
+
+Open VS Code Terminal:-
+-------------------------
+> check the path (it should be till folder_name)
+> docker --version
+> node file_name.js
+> docker build -t folder_name .
+> docker images

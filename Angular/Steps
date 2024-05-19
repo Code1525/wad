@@ -1,0 +1,55 @@
+PRACTICAL 5C -- ANGULAR
+
+Create folder on desktop and add the folder to vs code
+
+---OPEN TERMINAL---
+1. npm --version
+2. To download angular packages, run
+>  npm install -g @angular/cli@latest
+3. Create one angular project
+>  ng new practical5c
+
+4. In you practical folder, there must be a folder 'src' been created.
+go to -- src > app > app.component.html
+WE NEED TO EDIT app.component.html FILE
+CLEAR THE ENTIRE HTML PROGRAM, and WRITE THE BELOW CODE
+
+CODE==>
+<h1> {{title}}</h1>
+<input type="text" #name placeholder="Enter your Name" name="Name"> <br>
+<input type="text" #address placeholder="Enter your Address" name="Address"> <br>
+<input type="text" #contact placeholder="Enter your Contact" name="Contact"> <br>
+<input type="email" #email placeholder="Enter your Email" name="Email"> <br>
+<input type="password" #password placeholder="Enter your Password" name="Password"> <br>
+<button (click) = "getValue(name.value, address.value, contact.value, email.value)">Register</button>
+<h1>Your Registered Data</h1> <br>
+<p>Name: {{displayname}}</p>
+<p>Address: {{displayaddress}}</p>
+<p>Contact: {{displaycontact}}</p>
+<p>Email: {{displayemail}}</p>
+
+5. Open src > app > app.component.ts & just edit the title and add some lines below it[under class AppComponent]
+CODE==>
+title = 'Registration Form';
+
+  displayname='';
+  displayaddress='';
+  displaycontact='';
+  displayemail='';
+
+  getValue(name:string, address:string, contact:string, email:string){
+    this.displayname = name;
+    this.displayaddress = address;
+    this.displaycontact = contact;
+    this.displayemail = email;
+  }
+
+---BACK TO TERMINAL---
+1. change directory to the project file you created
+>  cd Practical5c
+2. ng serve
+YOU'LL GET A localhost LINK, RUN IT ON CHROME TO CHECK WHTHER YOUR WEBSITE WORKS.
+
+---BACK TO VS CODE---
+open src > app > app.component.css
+CODE==>

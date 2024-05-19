@@ -1,0 +1,114 @@
+> install POSTMAN API
+> install MongoDB Compass
+> install VS Code
+
+> create a folder Pract7 on windows and open it in VS Code
+
+
+VS Code Terminal:-
+------------------
+> npm init
+> PRESS ENTER
+> PRESS ENTER
+> PRESS ENTER
+> PRESS ENTER
+> PRESS ENTER
+> PRESS ENTER
+> PRESS ENTER
+> PRESS ENTER
+> PRESS ENTER
+> Is this OK? (yes)  PRESS ENTER
+
+
+VS Code:-
+-----------
+> create file index.js in Pract7 folder
+
+
+open MongoDB Compass:-
+----------------------
+> click on CONNECT
+> create a database by Command Prompt Placed at RIGHT BOTTOM CORNER ( ^ ) click on that arrow
+
+
+MongoDB Compass Terminal:-
+----------------------------
+> show dbs
+> use student
+> db.createCollection('profile')
+> db.profile.insertOne({name: 'Rohit', email: 'rohit@gmail.com', city: 'Nashik'})
+
+
+Back to MongoDB Compass:-
+-----------------------------
+> click on student then on profile then click on Find Botton GREEN in color
+
+
+Back to VS Code:-
+------------------
+> create a file mongodb.js
+
+
+Back to VS Code TERMINAL:-
+-----------------------------
+> npm i mongodb
+> npm i express
+
+
+Type code in mongodb
+Type code in index.js
+
+
+Open POSTMAN API:-
+--------------------
+> Select GET 
+> type localhost:3000/getData 
+> Send Button
+
+
+
+
+> Select POST 
+> type localhost:3000/insertData 
+> click on body  ----> click on raw ---> choose JSON instead of TEXT ---> type code as:
+                                                                                            {
+                                                                                              "name": "Arnav",
+                                                                                              "email": "arnav@gmai.com",
+                                                                                              "city": "Pune"
+                                                                                            }              
+             
+> Run node.js in VS Code Terminal
+> Click on SEND Button 
+
+ 
+
+Back to MongoDb Compass:-
+---------------------------
+> click on FIND (data inserted Successfully)
+
+Back to POSTMAN API:-
+------------------------
+> type localhost:3000/updateData/Arnav
+> Select PUT ---> click on body  ----> click on raw ---> choose JSON instead of TEXT ---> type code as:
+                                                                                            {
+                                                                                              "name": "Arnav",
+                                                                                              "email": "arnav@gmai.com",
+                                                                                              "city": "Mumbai"
+                                                                                            }  
+> Run node.js in VS Code Terminal
+> Click on SEND Button After compiling 
+
+Back to MongoDb Compass:-
+---------------------------
+> click on FIND (data inserted Successfully)
+
+
+Back to POSTMAN API:-
+------------------------
+> type localhost:3000/deleteData/Rohit
+> click on Params
+> Click on SEND Button
+
+Back to MongoDb Compass:-
+---------------------------
+> click on FIND (data inserted Successfully)
